@@ -78,6 +78,11 @@ This time though, `body-parser` is not built-in, we need to explicitly install i
 npm install body-parser --save
 ```
 
+`require` body-parser so you can use it in your code:
+```js
+var bodyParser = require('body-parser');
+```
+
 Now add this towards the top of your server, after your `require`s and before your `/create-post` endpoint:
 ```js
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -103,9 +108,12 @@ res.redirect('/');
 ```
 
 This means: "please redirect to the `/` endpoint."  This little trick will refresh the page!
-## [**Next step >>>**](step08.md)
+## [**Go to step 8 >>>**](step08.md)
 
 ---
-### Keywords
-* [POST vs GET](http://www.w3schools.com/tags/ref_httpmethods.asp)
-* [html forms]
+| Keyword | Explanation |
+|--------|:-------------------------------:|
+| `GET` | An HTTP method for fetching data. Read more [here](http://www.w3schools.com/tags/ref_httpmethods.asp). |
+| `POST` | An HTTP method for sending data. Read more [here](http://www.w3schools.com/tags/ref_httpmethods.asp). |
+| `middleware` | Functions in Express that run before the final request handler.  A nice article explains in more depth [here](https://www.safaribooksonline.com/blog/2014/03/10/express-js-middleware-demystified) |
+| `body-parser` | An Express middleware function that parses (reads) data from the request.  Documentation on it [here](https://github.com/expressjs/body-parser)|
